@@ -1,13 +1,13 @@
 <?php
-session_start();
+// session_start();
 
-    //use this in config file to ensure that this file is restrict from access in 
+    // //use this in config file to ensure that this file is restrict from access in 
 
-    if(!isset($_SERVER['HTTP_REFERER'])){
-        //redirect them to desired location
-        header('location: http://localhost/Noshi/index.php');
-        exit;
-    }
+    // if(!isset($_SERVER['HTTP_REFERER'])){
+    //     //redirect them to desired location
+    //     header('location: http://localhost/Noshi/index.php');
+    //     exit;
+    // }
 
 
 try{

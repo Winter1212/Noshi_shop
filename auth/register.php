@@ -31,7 +31,8 @@ if (isset($_POST['submit'])) {
                 if ($insert->execute()) {
                     
                     // Redirect to login page after successful registration
-                    header("Location:".APPURL."/login.php");
+                    // header("Location:".APPURL."/login.php");
+                    echo "<script> window.location.href='login.php'; </script>";
                     echo "<script> alert('Register have been successfully!');</script>";
                     exit;
                 } else {

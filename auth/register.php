@@ -2,6 +2,10 @@
 <?php require "../config/config.php"; ?>
 
 <?php
+
+if(isset($_SESSION["username"])) {
+    echo "<script> window.location.href='".APPURL."'; </script>";
+}
 $error_message = ''; // Variable to store error messages
 
 if (isset($_POST['submit'])) {

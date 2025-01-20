@@ -4,6 +4,9 @@
 <?php 
 $error_message = ''; // Variable to store error messages
 
+if(isset($_SESSION["username"])) {
+    echo "<script> window.location.href='".APPURL."'; </script>";
+}
 if (isset($_POST['submit'])) {
     // Check if any input is empty
     if (empty($_POST['email']) || empty($_POST['password'])) {
@@ -26,8 +29,13 @@ if (isset($_POST['submit'])) {
                 if (password_verify($password, $fetch['mypassword'])) {
                     // Successful login
                     // Redirect to the dashboard or another page
-                    header("Location: " . APPURL . "/dashboard.php");
+                    $_SESSION['username'] = $fetch['username'];
+                    $_SESSION['email'] = $fetch['email'];
+                    $_SESSION['user_id'] = $fetch['id'];
+                    $_SESSION['image'] = $fetch['image'];
+                    echo "<script> window.location.href='".APPURL."'; </script>";
                     exit;
+
                 } else {
                     $error_message = 'Incorrect password. Please try again!';
                 }

@@ -162,7 +162,7 @@
                         <img src="assets/img/<?php echo $category->image; ?>">
                         <div class="card-img-overlay d-flex align-items-center justify-content-center">
                             <!-- <h4 class="card-title">Vegetables</h4> -->
-                            <a href="shop.php" class="btn btn-primary btn-lg">Vegetables</a>
+                            <a href="shop.php" class="btn btn-primary btn-lg"><?php echo $category->name ?></a>
                         </div>
                     </div>
                 </div>

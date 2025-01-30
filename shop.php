@@ -119,7 +119,8 @@ $allFrozens = $frozens->fetchAll(PDO::FETCH_OBJ);
                                             <span class="reguler"><?php echo number_format($mostProduct->price, 2); ?>
                                                 $</span>
                                         </div>
-                                        <a href="detail-product.html" class="btn btn-block btn-primary">
+                                        <a href="<?php echo APPURL; ?>/products/detail-product.php?id=<?php echo $mostProduct->id; ?>"
+                                            class="btn btn-block btn-primary">
                                             Add to Cart
                                         </a>
                                     </div>
@@ -343,7 +344,7 @@ $allFrozens = $frozens->fetchAll(PDO::FETCH_OBJ);
                                     <div class="card-ribbon">
                                         <div class="card-ribbon-container right">
                                             <span class="ribbon ribbon-primary">SPECIAL</span>
-                                        </div>
+                                        </div>                                                                                                                                                                                                                                         
                                     </div>
                                     <div class="card-badge">
                                         <div class="card-badge-container left">

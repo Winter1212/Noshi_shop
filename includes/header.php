@@ -34,9 +34,9 @@ define("APPURL", "http://localhost/Noshi");
 </head>
 
 <body>
-    <div class="page-header">
+    <div class="page-header" style="z-index: 1000">
         <!--=============== Navbar ===============-->
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
+        <nav class="z-index-5 navbar fixed-top navbar-expand-md navbar-dark bg-transparent " id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
                 <a href="http://localhost/Noshi/index.php" class="navbar-brand">
